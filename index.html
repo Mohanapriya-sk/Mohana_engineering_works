@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>மோகனா இன்ஜினியரிங் ஒர்க்ஸ் | தரமான அடுப்புகள், உங்கள் அளவில்</title>
-<meta name="description" content="மோகனா இன்ஜினியரிங் ஒர்க்ஸ் — கேஸ் அடுப்பு, ஹோட்டல் அடுப்பு, ஃபாஸ்ட் ஃபுட் அடுப்பு, தோசை தவா, பணியாரம் தவா, ராக்கெட் மற்றும் விறகு அடுப்புகள். உங்கள் தேவைக்கேற்ற அளவில் தயாரிப்பு. சில்லறை மற்றும் மொத்த விற்பனைக்கு அழைக்க: 98653 51366">
+<meta name="description" content="மோகனா இன்ஜினியரிங் ஒர்க்ஸ் — 1989 முதல், உரிமையாளர் சிவக்குமார். கேஸ், ஹோட்டல், ஃபாஸ்ட் ஃபுட் அடுப்புகள், தோசை மற்றும் பணியாரம் தவா, ராக்கெட், விறகு அடுப்புகள் உங்கள் அளவில். WhatsApp: +91 99423 20722">
 <meta property="og:title" content="மோகனா இன்ஜினியரிங் ஒர்க்ஸ் — உங்கள் அளவில் உங்கள் அடுப்பு">
-<meta property="og:description" content="கேஸ் அடுப்பு, தோசை தவா, பணியாரம் தவா, ராக்கெட் மற்றும் விறகு அடுப்புகள். சில்லறை மற்றும் மொத்த விற்பனை. அழைக்க: 98653 51366">
+<meta property="og:description" content="தோசை, பணியாரம், ஹோட்டல், கேஸ், ராக்கெட் மற்றும் விறகு அடுப்புகள். 1989 முதல் — உரிமையாளர் சிவக்குமார். WhatsApp: +91 99423 20722">
 <meta property="og:image" content="images/four-burner-flame.jpg">
 <meta name="theme-color" content="#e0161e">
 <link rel="preload" href="fonts/anek-tamil-tamil-800-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -391,6 +391,14 @@ html{scroll-padding-top:88px}
 .hero h1{font-size:clamp(3rem,5.1vw,5.25rem);line-height:1.1;letter-spacing:-.035em}
 .hero h1 span{white-space:normal}
 .hero .lead{max-width:36ch;margin-top:22px;color:#505a64}
+.heritage{
+  display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:8px 12px;
+  border:1px solid #e6e8eb;border-radius:4px;background:#fff;color:#505a64;
+  font-size:.96rem;box-shadow:0 5px 18px #20262d08;
+  animation:heritage-glow 4s ease-in-out infinite
+}
+.heritage-year{color:var(--red-deep);font-family:var(--display);font-size:1.1rem;font-weight:800}
+@keyframes heritage-glow{50%{box-shadow:0 7px 24px #c7192018}}
 .hero .actions{gap:12px;margin-top:30px}
 .hero-photo{
   right:var(--m);top:50%;width:min(42%,640px);aspect-ratio:1.12;
@@ -449,9 +457,51 @@ html{scroll-padding-top:88px}
   border:1px solid #444b53;border-radius:8px;
   background-color:#272e35;
   background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);
-  background-size:28px 28px;box-shadow:0 16px 38px #10141940
+  background-size:28px 28px;box-shadow:0 16px 38px #10141940;
+  animation:stage-breathe 6s ease-in-out infinite
 }
-.b-stage svg{overflow:visible}
+.b-stage svg{overflow:visible;animation:stove-float 4s ease-in-out infinite}
+.builder h2{position:relative}
+.builder h2::after{
+  content:"";position:absolute;left:0;bottom:-.22em;width:60px;height:4px;
+  border-radius:4px;background:var(--red)
+}
+.flame-lobe{transform-box:fill-box;transform-origin:center 90%;animation:gas-flame .9s ease-in-out infinite alternate}
+.flame-lobe:nth-child(2n){animation-duration:1.15s}
+.flame-core{transform-box:fill-box;transform-origin:center 90%;animation:gas-flame .75s ease-in-out infinite alternate-reverse}
+@keyframes gas-flame{from{transform:scale(.92,.88);opacity:.83}to{transform:scale(1.06,1.13);opacity:1}}
+@keyframes stage-breathe{50%{box-shadow:0 20px 46px #10141955,0 0 28px #d7192018}}
+@keyframes stove-float{50%{transform:translateY(-3px)}}
+.hero-star{animation:hero-glow 8s ease-in-out infinite alternate}
+@keyframes hero-glow{from{opacity:.07}to{opacity:.17}}
+.btn{position:relative;isolation:isolate;overflow:hidden;transition:transform .3s var(--ease),background .25s,box-shadow .3s var(--ease)}
+.btn::after{
+  content:"";position:absolute;z-index:-1;top:-60%;left:-45%;width:28%;height:220%;
+  transform:translateX(-180%) rotate(22deg);background:#ffffff30;
+  transition:transform .65s var(--ease)
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px #20262d26}
+.btn:hover::after{transform:translateX(650%) rotate(22deg)}
+.plate figure{border-radius:8px}
+.plate figure::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(125deg,#fff0 35%,#fff2 50%,#fff0 65%);
+  transform:translateX(-110%);transition:transform .8s var(--ease)
+}
+.plate figure:hover::after{transform:translateX(110%)}
+.plate figure:hover img:not(.out){transform:scale(1.035)}
+.item{transition:transform .3s var(--ease),border-color .2s,box-shadow .3s var(--ease)}
+.item:hover{transform:translateY(-5px)}
+.process-photos img{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.process-photos figure:hover img{transform:translateY(-5px) scale(1.015);box-shadow:0 18px 38px #20262d24}
+.steps li{transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.steps li:hover{transform:translateY(-4px);border-color:#d8a9ab;box-shadow:0 12px 28px #20262d12}
+.chips span{transition:background .2s,transform .2s,box-shadow .2s}
+.chips label:hover span{transform:translateY(-2px);box-shadow:0 6px 14px #0002}
+.tabs button{transition:color .2s,transform .2s}
+.tabs button:hover{transform:translateY(-2px)}
+.fab{transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.fab:hover{transform:translateY(-4px);box-shadow:0 16px 34px #0004}
 .b-sum{align-items:flex-start}
 .b-sum .btn{white-space:normal}
 .gallery{max-width:1500px;margin-inline:auto;padding:clamp(88px,9vw,132px) var(--m);gap:clamp(28px,6vw,84px)}
@@ -488,6 +538,30 @@ html{scroll-padding-top:88px}
 .addr{padding:0 12px;align-items:start}
 .addr p{color:#444e58}
 .addr p a{color:var(--red-deep);font-weight:600}
+.family{padding:clamp(88px,9vw,132px) var(--m);overflow:hidden;background:#f1f3f5}
+.family-wrap{
+  max-width:1500px;margin-inline:auto;display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(24px,4vw,56px);align-items:center
+}
+.family-copy{grid-column:1/5}
+.family-copy h2{max-width:12ch;font-size:clamp(2rem,3.5vw,3.4rem)}
+.family-copy>p:not(.family-years){margin-top:20px;max-width:36ch;color:#505a64}
+.family-years{margin-top:30px;color:var(--red-deep);font-family:var(--display);font-size:clamp(2.4rem,5vw,4.4rem);font-weight:800;line-height:1}
+.family-years span{display:block;margin-top:8px;color:#505a64;font-family:var(--text);font-size:1rem;font-weight:600}
+.family-portraits{
+  grid-column:5/13;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(16px,2.4vw,32px);align-items:start
+}
+.family-portrait{min-width:0;margin:0}
+.family-portrait img{
+  display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 34%;
+  border-radius:6px;background:#f5e6d3;
+  transition:transform .8s var(--ease),filter .5s var(--ease)
+}
+.family-portrait:hover img{transform:translateY(-5px) scale(1.015);filter:saturate(1.04)}
+.family-portrait figcaption{display:grid;gap:2px;margin-top:14px}
+.family-portrait figcaption strong{font-family:var(--display);font-size:1.3rem}
+.family-portrait figcaption span{color:#58616a;font-size:.98rem}
 footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
 .blocks{height:clamp(150px,25vw,320px)}
 .blocks span:nth-child(2n){background:#d4d8dc}
@@ -567,6 +641,13 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
   .coupon{grid-template-columns:1fr}
   .c-left{border-right:0;border-bottom:1px solid #ffffff45}
   .c-right input,.c-right select{height:52px}
+  .family{padding:82px 20px}
+  .family-wrap{grid-template-columns:minmax(0,1fr);gap:28px}
+  .family-copy,.family-portraits{grid-column:1/-1}
+  .family-copy h2{max-width:18ch}
+  .family-years{margin-top:20px}
+  .family-portraits{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  .family-portrait img{aspect-ratio:4/5}
   .addr{display:block;padding:0}
   .addr p{margin-top:12px}
   .f-row{display:block}
@@ -620,6 +701,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     <li><a href="#products">அடுப்புகள்</a></li>
     <li><a href="#build">அளவில் செய்ய</a></li>
     <li><a href="#workshop">பட்டறை</a></li>
+    <li><a href="#family">குடும்பம்</a></li>
     <li><a href="#contact">தொடர்புக்கு</a></li>
   </ul>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span aria-hidden="true">☰</span> மெனு</button>
@@ -634,7 +716,8 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     <p class="hero-kicker rv" style="--i:0">மோகனா இன்ஜினியரிங் ஒர்க்ஸ் <span>·</span> பவானி</p>
     <h1><span class="rv" style="--i:0">உங்கள் அளவில்</span><span class="rv" style="--i:1">உங்கள் அடுப்பு</span></h1>
     <p class="lead rv" style="--i:2">கேஸ் அடுப்பு, ஹோட்டல் மற்றும் ஃபாஸ்ட் ஃபுட் அடுப்பு, தோசை தவா, பணியாரம் தவா, ராக்கெட் மற்றும் விறகு அடுப்புகள். ஒரு அடுப்பிலிருந்து மொத்த ஆர்டர் வரை, உங்கள் தேவைக்கும் அளவுக்கும் ஏற்ப தயாரித்துத் தருகிறோம்.</p>
-    <div class="actions rv" style="--i:3">
+    <p class="heritage rv" style="--i:3"><span class="heritage-year">1989</span> முதல் <span aria-hidden="true">·</span> உரிமையாளர் <strong>சிவக்குமார்</strong></p>
+    <div class="actions rv" style="--i:4">
       <a class="btn" href="tel:+919865351366"><i class="star"></i>அழைக்க 98653 51366</a>
       <a class="btn ink" href="#build">உங்கள் அளவைத் தேர்வு செய்யுங்கள்</a>
     </div>
@@ -671,7 +754,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     </div>
     <div class="cells">
       <a href="tel:+919865351366">விலை விவரம் பெற அழைக்க</a>
-      <a id="show-wa" href="https://wa.me/919865351366" target="_blank" rel="noopener"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்பில் கேட்க</a>
+      <a id="show-wa" href="https://wa.me/919942320722" target="_blank" rel="noopener"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்பில் கேட்க</a>
     </div>
   </div>
 </section>
@@ -771,7 +854,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
       <svg id="stage" viewBox="0 0 600 420" role="img" aria-label="நீங்கள் தேர்ந்தெடுத்த அடுப்பின் மேல் தோற்றம்"></svg>
       <div class="b-sum">
         <p id="sum"><strong>கேஸ் அடுப்பு</strong> · 4 பர்னர் · 4*2 அடி · 1 பீஸ்</p>
-        <a class="btn" id="b-wa" href="https://wa.me/919865351366" target="_blank" rel="noopener"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்பில் அனுப்ப</a>
+        <a class="btn" id="b-wa" href="https://wa.me/919942320722" target="_blank" rel="noopener"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்பில் அனுப்ப</a>
       </div>
     </div>
   </div>
@@ -812,6 +895,27 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     <li class="rv" style="--i:1"><b>செய்கிறோம்</b><p>அளவுக்கு ஏற்ப இரும்பு வெட்டி, வெல்டிங் செய்து, பெயிண்ட் பூசி, பர்னர் பொருத்துகிறோம். தயாரிப்பு விவரங்களை ஆர்டரின்போது உறுதிப்படுத்துங்கள்.</p></li>
     <li class="rv" style="--i:2"><b>எடுத்துச் செல்லுங்கள்</b><p>கடைக்கு நேரில் வந்து வாங்கலாம். மொத்த ஆர்டர் மற்றும் அனுப்பும் வசதி குறித்து தொலைபேசியில் விசாரிக்கலாம்.</p></li>
   </ol>
+</section>
+
+<!-- ============ FAMILY ============ -->
+<section class="family" id="family" aria-labelledby="family-title">
+  <div class="family-wrap">
+    <div class="family-copy rv">
+      <h2 id="family-title">ஒரு குடும்பப் பயணம்</h2>
+      <p>பவானியில் அடுப்புகள் தயாரிக்கும் மோகனா இன்ஜினியரிங் ஒர்க்ஸின் உரிமையாளர் சிவக்குமார். அவரது மகன் கண்ணன், இந்தக் குடும்பத்தின் அடுத்த தலைமுறை.</p>
+      <p class="family-years">1989<span>முதல் இன்றுவரை</span></p>
+    </div>
+    <div class="family-portraits" aria-label="சிவக்குமார் மற்றும் அவரது மகன் கண்ணன்">
+      <figure class="family-portrait rv" style="--i:1">
+        <img src="images/owner-sivakumar.png" width="768" height="894" alt="மோகனா இன்ஜினியரிங் ஒர்க்ஸின் உரிமையாளர் சிவக்குமார்" loading="lazy">
+        <figcaption><strong>சிவக்குமார்</strong><span>உரிமையாளர்</span></figcaption>
+      </figure>
+      <figure class="family-portrait rv" style="--i:2">
+        <img src="images/owner-kannan.png" width="768" height="768" alt="சிவக்குமாரின் மகன் கண்ணன்" loading="lazy">
+        <figcaption><strong>கண்ணன்</strong><span>சிவக்குமாரின் மகன்</span></figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
@@ -859,7 +963,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
       <a href="#c-wood">ராக்கெட் அடுப்பு</a><a href="#c-wood">விறகு அடுப்பு</a><a href="#build">அளவில் செய்ய</a><a href="#workshop">பட்டறை</a>
     </nav>
     <div class="f-contact">
-      <strong>மோகனா இன்ஜினியரிங் ஒர்க்ஸ்</strong>
+      <strong>மோகனா இன்ஜினியரிங் ஒர்க்ஸ் · 1989 முதல்</strong>
       <a href="tel:+919865351366">98653 51366</a>
       <a href="tel:+919942320722">99423 20722</a>
       <a href="https://www.instagram.com/kanna_n5939/" target="_blank" rel="noopener">இன்ஸ்டாகிராம் @kanna_n5939</a>
@@ -871,7 +975,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
   </div>
 </footer>
 
-<a class="fab" id="fab" href="https://wa.me/919865351366?text=%E0%AE%B5%E0%AE%A3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D%2C%20%E0%AE%85%E0%AE%9F%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%20%E0%AE%AA%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%BF%20%E0%AE%95%E0%AF%87%E0%AE%9F%E0%AF%8D%E0%AE%95%20%E0%AE%B5%E0%AF%87%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D" target="_blank" rel="noopener" aria-label="வாட்ஸ்அப்பில் பேச"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்</a>
+<a class="fab" id="fab" href="https://wa.me/919942320722?text=%E0%AE%B5%E0%AE%A3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D%2C%20%E0%AE%85%E0%AE%9F%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%20%E0%AE%AA%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%BF%20%E0%AE%95%E0%AF%87%E0%AE%9F%E0%AF%8D%E0%AE%95%20%E0%AE%B5%E0%AF%87%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D" target="_blank" rel="noopener" aria-label="வாட்ஸ்அப்பில் பேச"><svg class="whatsapp-icon" aria-hidden="true"><use href="#whatsapp-mark"></use></svg>வாட்ஸ்அப்</a>
 
 <script>
 (() => {
@@ -889,7 +993,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
       document.querySelector('.nav').classList.remove('menu-open');
     }
   });
-  const WA = '919865351366';
+  const WA = '919942320722';
   const wa = t => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -940,11 +1044,25 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
   const stage = document.getElementById('stage');
   const $ = id => document.getElementById(id);
   const fmt = n => (n % 1 ? n.toFixed(1) : String(n));
-  const STAR = (cx, cy, r, fill) => {
-    const a = r * 0.22;
-    return `<path d="M${cx} ${cy-r}L${cx+a} ${cy-a}L${cx+r} ${cy}L${cx+a} ${cy+a}L${cx} ${cy+r}L${cx-a} ${cy+a}L${cx-r} ${cy}L${cx-a} ${cy-a}Z" fill="${fill}"/>`;
+  const flame = (cx, cy, r, kind = 'gas') => {
+    if (kind === 'wood') return `<g transform="translate(${cx} ${cy})">
+      <ellipse cx="0" cy="${r*.42}" rx="${r*.5}" ry="${r*.22}" fill="#e43b14" opacity=".7"/>
+      <path class="flame-lobe" d="M0 ${r*.68} C${-r*.42} ${r*.38} ${-r*.23} ${-r*.24} ${-r*.34} ${-r*1.16} C${r*.08} ${-r*.82} ${r*.04} ${-r*.34} 0 ${r*.68}Z" fill="url(#woodFlame)"/>
+      <path class="flame-lobe" style="animation-delay:-.28s" d="M${-r*.08} ${r*.62} C${-r*.14} ${r*.18} ${r*.28} ${-r*.14} ${r*.13} ${-r*1.42} C${r*.76} ${-r*.65} ${r*.34} ${r*.18} ${r*.08} ${r*.62}Z" fill="url(#woodFlame)"/>
+      <path class="flame-lobe" style="animation-delay:-.51s" d="M${r*.14} ${r*.64} C${r*.46} ${r*.25} ${r*.16} ${-r*.27} ${r*.42} ${-r*.98} C${r*.83} ${-r*.2} ${r*.48} ${r*.38} ${r*.14} ${r*.64}Z" fill="url(#woodFlame)"/>
+      <path class="flame-core" d="M0 ${r*.56} C${-r*.2} ${r*.19} ${r*.18} ${-r*.17} 0 ${-r*.72} C${r*.36} ${-r*.18} ${r*.17} ${r*.28} 0 ${r*.56}Z" fill="url(#hotCore)"/>
+    </g>`;
+    const color = 'gasFlame';
+    let jets = '';
+    for (let i = 0; i < 12; i++) {
+      const angle = i * 30, delay = -((i % 5) * 0.13);
+      jets += `<g transform="rotate(${angle})">
+        <path class="flame-lobe" style="animation-delay:${delay}s" d="M0 ${-r*.48} C${-r*.17} ${-r*.65} ${-r*.12} ${-r*.96} 0 ${-r*1.2} C${r*.12} ${-r*.96} ${r*.17} ${-r*.65} 0 ${-r*.48}Z" fill="url(#${color})"/>
+        <path class="flame-core" d="M0 ${-r*.52} C${-r*.07} ${-r*.65} ${-r*.04} ${-r*.78} 0 ${-r*.9} C${r*.04} ${-r*.78} ${r*.07} ${-r*.65} 0 ${-r*.52}Z" fill="url(#hotCore)"/>
+      </g>`;
+    }
+    return `<g transform="translate(${cx} ${cy})">${jets}</g>`;
   };
-  const flame = (cx, cy, r) => `<g class="flame" style="transform-box:fill-box"><ellipse cx="${cx}" cy="${cy}" rx="${r*0.42}" ry="${r*0.42}" fill="#ff7a1a"/><ellipse cx="${cx}" cy="${cy}" rx="${r*0.22}" ry="${r*0.22}" fill="#ffd34d"/></g>`;
 
   function draw() {
     const type = f.type.value, qty = f.qty.value;
@@ -952,39 +1070,93 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     $('o-len').textContent = fmt(L); $('o-wid').textContent = fmt(Wd); $('o-burners').textContent = nb;
     const single = type === 'rocket' || type === 'viragu';
     $('f-burners').style.display = single || type === 'paniyaram' ? 'none' : '';
-    const maxW = 540, maxH = 330;
+    const maxW = 520, maxH = 300;
     const sc = Math.min(maxW / L, maxH / Wd);
-    const w = L * sc, h = Wd * sc, x = (600 - w) / 2, y = (380 - h) / 2;
-    let g = `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#78818b"/>`;
-    const t = Math.max(10, Math.min(w, h) * 0.07);
-    g += `<rect x="${x+t}" y="${y+t}" width="${w-2*t}" height="${h-2*t}" fill="#48515b"/>`;
+    const w = L * sc, h = Wd * sc, x = (600 - w) / 2, y = 25 + (320 - h) / 2;
+    const t = Math.max(12, Math.min(w, h) * 0.075), radius = Math.min(16, t * .65);
+    let g = `<defs>
+      <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1f4f6"/><stop offset=".18" stop-color="#9ca7b0"/><stop offset=".43" stop-color="#e1e5e8"/><stop offset=".72" stop-color="#808b95"/><stop offset="1" stop-color="#cbd1d6"/></linearGradient>
+      <linearGradient id="worktop" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#444d55"/><stop offset=".48" stop-color="#252b31"/><stop offset="1" stop-color="#151a1f"/></linearGradient>
+      <linearGradient id="castIron" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#66717a"/><stop offset=".5" stop-color="#20262c"/><stop offset="1" stop-color="#090d11"/></linearGradient>
+      <radialGradient id="burnerCap" cx=".34" cy=".28"><stop stop-color="#adb7bf"/><stop offset=".4" stop-color="#454e56"/><stop offset="1" stop-color="#11161a"/></radialGradient>
+      <radialGradient id="gasFlame"><stop stop-color="#fff36b"/><stop offset=".38" stop-color="#ff9f1c"/><stop offset="1" stop-color="#e32613" stop-opacity=".3"/></radialGradient>
+      <radialGradient id="woodFlame"><stop stop-color="#fff8a5"/><stop offset=".38" stop-color="#ffb127"/><stop offset="1" stop-color="#ef3416" stop-opacity=".2"/></radialGradient>
+      <radialGradient id="hotCore"><stop stop-color="#fffde0"/><stop offset=".65" stop-color="#fff06a"/><stop offset="1" stop-color="#ff8a16" stop-opacity=".18"/></radialGradient>
+      <linearGradient id="griddle" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9d5ca"/><stop offset=".38" stop-color="#6f6e69"/><stop offset=".7" stop-color="#36383a"/><stop offset="1" stop-color="#a7a39a"/></linearGradient>
+      <filter id="stoveShadow" x="-20%" y="-20%" width="140%" height="155%"><feGaussianBlur in="SourceAlpha" stdDeviation="7"/><feOffset dy="7"/><feComponentTransfer><feFuncA type="linear" slope=".48"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>`;
+    const feet = [[x+12,y+12],[x+w-12,y+12],[x+12,y+h-12],[x+w-12,y+h-12]];
+    g += feet.map(([fx,fy]) => `<rect x="${fx-8}" y="${fy-6}" width="16" height="14" rx="3" fill="#10151a" stroke="#78838c" stroke-width="2"/>`).join('');
+    g += `<g filter="url(#stoveShadow)"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${radius}" fill="url(#steel)" stroke="#f6f8f9" stroke-width="2"/>
+      <rect x="${x+t*.42}" y="${y+t*.42}" width="${w-t*.84}" height="${h-t*.84}" rx="${Math.max(5,radius*.55)}" fill="url(#worktop)" stroke="#515b64" stroke-width="2"/>
+      <path d="M${x+t} ${y+t*.7}H${x+w-t} M${x+t} ${y+h-t*.7}H${x+w-t}" stroke="#ffffff" stroke-opacity=".36" stroke-width="2"/></g>`;
     if (type === 'gas') {
       const cols = Math.ceil(nb / (Wd >= 2 && nb > 3 ? 2 : 1)), rows = Math.ceil(nb / cols);
-      const cw = (w - 2*t) / cols, rh = (h - 2*t) / rows, r = Math.min(cw, rh) * 0.36;
+      const cw = (w - 2*t) / cols, rh = (h - 2*t) / rows, r = Math.min(cw, rh) * 0.3;
       let k = 0;
       for (let j = 0; j < rows; j++) for (let i = 0; i < cols && k < nb; i++, k++) {
         const cx = x + t + cw * (i + .5), cy = y + t + rh * (j + .5);
-        g += STAR(cx, cy, r * 1.25, '#d71920') + `<circle cx="${cx}" cy="${cy}" r="${r*0.5}" fill="#c9ccd3"/>` + flame(cx, cy, r);
+        g += `<circle cx="${cx}" cy="${cy}" r="${r*1.12}" fill="url(#castIron)" stroke="#89939b" stroke-width="${Math.max(2,r*.1)}"/>`
+          + `<circle cx="${cx}" cy="${cy}" r="${r*.83}" fill="none" stroke="#080c10" stroke-width="${Math.max(3,r*.24)}"/>
+          <circle cx="${cx}" cy="${cy}" r="${r*.68}" fill="none" stroke="#818a91" stroke-width="${Math.max(2,r*.1)}"/>
+          <circle cx="${cx}" cy="${cy}" r="${r*.5}" fill="url(#burnerCap)" stroke="#c1c9ce" stroke-width="${Math.max(2,r*.08)}"/>
+          <circle cx="${cx}" cy="${cy}" r="${r*.13}" fill="#171c20" stroke="#aeb7be" stroke-width="2"/>`;
+        for (let p = 0; p < 8; p++) {
+          const a = p * Math.PI / 4, px = cx + Math.cos(a) * r*.94, py = cy + Math.sin(a) * r*.94;
+          g += `<circle cx="${px}" cy="${py}" r="${Math.max(1.4,r*.035)}" fill="#f3f5f6"/>`;
+        }
+        g += `<path d="M${cx-r*1.18} ${cy}H${cx-r*.56} M${cx+r*.56} ${cy}H${cx+r*1.18} M${cx} ${cy-r*1.18}V${cy-r*.56} M${cx} ${cy+r*.56}V${cy+r*1.18}" stroke="#151a1e" stroke-width="${Math.max(4,r*.19)}" stroke-linecap="round"/>
+          <path d="M${cx-r*1.1} ${cy-2}H${cx-r*.65} M${cx+r*.65} ${cy-2}H${cx+r*1.1}" stroke="#aab2b9" stroke-width="1.5"/>`;
+        g += flame(cx, cy, r*1.08);
       }
     } else if (type === 'dosa') {
-      g += `<rect x="${x+t*1.4}" y="${y+t*1.4}" width="${w-2.8*t}" height="${h-2.8*t}" fill="#2b2b2e"/>`;
-      for (let i = 0; i < Math.min(nb, 6); i++) {
-        const cx = x + t*1.4 + (w - 2.8*t) * ((i % 3) + .5) / Math.min(3, nb), cy = y + h * (nb > 3 ? (i < 3 ? .34 : .68) : .5);
-        if (i < nb) g += `<circle cx="${cx}" cy="${cy}" r="${Math.min(w,h)*0.12}" fill="#f2e3c4" opacity=".92"/>`;
+      g += `<rect x="${x+t}" y="${y+t}" width="${w-2*t}" height="${h-t*2.2}" rx="${radius*.7}" fill="url(#griddle)" stroke="#e0e3e5" stroke-width="2"/>
+        <path d="M${x+t*1.5} ${y+t*1.5}H${x+w-t*1.5}" stroke="#fff" stroke-opacity=".45" stroke-width="3"/>
+        <ellipse cx="${x+w*.5}" cy="${y+h*.48}" rx="${w*.29}" ry="${h*.23}" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="3"/>`;
+      const burners = Math.min(nb, 6), spacing = (w-t*3) / (burners+1);
+      for (let i = 0; i < burners; i++) {
+        const cx = x + t*1.5 + spacing*(i+1), cy = y+h-t*.65;
+        g += flame(cx, cy, Math.max(5,t*.25));
       }
     } else if (type === 'paniyaram') {
       const pad = t * 1.6, cols = Math.max(3, Math.round(L * 3)), rows = Math.max(2, Math.round(Wd * 3));
-      g += `<rect x="${x+t}" y="${y+t}" width="${w-2*t}" height="${h-2*t}" fill="#b9bcc4"/>`;
+      g += `<rect x="${x+t}" y="${y+t}" width="${w-2*t}" height="${h-t*2.2}" rx="${radius*.7}" fill="url(#griddle)" stroke="#d3d8dc" stroke-width="2"/>
+        <path d="M${x+t*1.5} ${y+t*1.5}H${x+w-t*1.5}" stroke="#fff" stroke-opacity=".42" stroke-width="2"/>`;
       const cw = (w - 2*pad) / cols, rh = (h - 2*pad) / rows, r = Math.min(cw, rh) * .36;
-      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++)
-        g += `<circle cx="${x+pad+cw*(i+.5)}" cy="${y+pad+rh*(j+.5)}" r="${r}" fill="#6d717a"/>`;
+      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
+        const cx = x+pad+cw*(i+.5), cy = y+pad+rh*(j+.5);
+        g += `<circle cx="${cx}" cy="${cy}" r="${r*1.18}" fill="#22282e" stroke="#c7cbd0" stroke-width="1"/>
+          <circle cx="${cx}" cy="${cy-r*.08}" r="${r*.77}" fill="#777b7e" stroke="#35393c" stroke-width="1"/>
+          <ellipse cx="${cx-r*.2}" cy="${cy-r*.35}" rx="${r*.27}" ry="${r*.12}" fill="#fff" opacity=".2"/>`;
+      }
+      const burners = Math.min(nb, 6), spacing = (w-t*3) / (burners+1);
+      for (let i = 0; i < burners; i++) g += flame(x+t*1.5+spacing*(i+1), y+h-t*.65, Math.max(5,t*.22));
     } else {
       const cx = 300, cy = y + h / 2, r = Math.min(w, h) * .34;
-      g += `<rect x="${cx-r}" y="${cy-r}" width="${2*r}" height="${2*r}" fill="#48515b"/>` + STAR(cx, cy, r*1.15, '#d71920') + flame(cx, cy, r*1.4);
-      if (type === 'viragu') g += `<rect x="${x}" y="${y+h-t}" width="${w*0.4}" height="${t}" fill="#ff7a1a" opacity=".85"/>`;
+      if (type === 'rocket') {
+        g += `<circle cx="${cx}" cy="${cy}" r="${r*1.2}" fill="url(#castIron)" stroke="#bdc4ca" stroke-width="3"/>
+          <circle cx="${cx}" cy="${cy}" r="${r*.86}" fill="#11171c" stroke="#77818a" stroke-width="3"/>
+          <path d="M${cx-r*1.05} ${cy}H${cx-r*.55} M${cx+r*.55} ${cy}H${cx+r*1.05} M${cx} ${cy-r*1.05}V${cy-r*.55} M${cx} ${cy+r*.55}V${cy+r*1.05}" stroke="#14191e" stroke-width="${Math.max(5,r*.18)}" stroke-linecap="round"/>
+          ${flame(cx,cy,r*.56,'wood')}`;
+      } else {
+        const doorY = y+h-t*2.2, doorH = Math.min(h*.32,t*2.6), doorW = Math.min(w*.38,t*3.2);
+        g += `<rect x="${x+w*.5-doorW*.5}" y="${doorY}" width="${doorW}" height="${doorH}" rx="${radius*.55}" fill="#111619" stroke="#a4abb0" stroke-width="3"/>
+          <path d="M${cx-doorW*.37} ${doorY+doorH*.72}q${doorW*.18} ${-doorH*.62} ${doorW*.36} ${-doorH*.16}q${doorW*.17} ${-doorH*.7} ${doorW*.36} ${-doorH*.12}" fill="none" stroke="#6a301e" stroke-width="${Math.max(4,t*.28)}" stroke-linecap="round"/>
+          <rect x="${x+w*.5-doorW*.58}" y="${doorY+doorH*.48}" width="5" height="5" rx="2" fill="#e65b24"/>
+          ${flame(cx,doorY+doorH*.72,Math.max(7,doorH*.32),'wood')}`;
+      }
+    }
+    const controls = type === 'gas' ? Math.min(6,nb) : (type === 'dosa' || type === 'paniyaram' ? 2 : 0);
+    if (controls) {
+      g += `<rect x="${x+t*.7}" y="${y+h-t*.78}" width="${w-t*1.4}" height="${t*.62}" rx="${t*.16}" fill="url(#castIron)" stroke="#aeb7be" stroke-width="1.5"/>`;
+      for (let i = 0; i < controls; i++) {
+        const kx = x+t+(w-t*2)*(i+.5)/controls, ky = y+h-t*.48;
+        g += `<circle cx="${kx}" cy="${ky}" r="${Math.max(4,t*.2)}" fill="#161b20" stroke="#c4cbd0" stroke-width="2"/>
+          <path d="M${kx} ${ky-2}l${Math.max(3,t*.11)} ${-Math.max(3,t*.11)}" stroke="#f5f6f7" stroke-width="2" stroke-linecap="round"/>`;
+      }
     }
     const label = `${fmt(L)}*${fmt(Wd)}`;
-    g += `<text x="300" y="412" text-anchor="middle" fill="#ffffff" font-family="Anek Tamil, sans-serif" font-weight="800" font-size="34">${label} அடி</text>`;
+    g += `<text x="300" y="407" text-anchor="middle" fill="#f0f3f5" font-family="Anek Tamil, sans-serif" font-weight="800" font-size="28">${label} அடி</text>`;
     stage.innerHTML = g;
     const bTxt = single || type === 'paniyaram' ? '' : ` · ${nb} பர்னர்`;
     $('sum').innerHTML = `<strong>${NAMES[type]}</strong>${bTxt} · ${label} அடி · ${qty}`;
