@@ -972,7 +972,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
     </div>
   </div>
   <div class="f-last">
-    <span>© <span id="yr">2026</span> மோகனா வெல்டிங் வொர்க்ஸ்</span>
+    <span>© <span id="yr">1987</span> மோகனா வெல்டிங் வொர்க்ஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span>  
     <a class="btn light" href="#top">மேலே செல்ல</a>
   </div>
 </footer>
@@ -1186,7 +1186,7 @@ footer{padding:clamp(50px,7vw,88px) var(--m);background:#20262d}
   /* floating WhatsApp after hero */
   const fab = $('fab');
   addEventListener('scroll', () => fab.classList.toggle('show', scrollY > innerHeight * .8), { passive: true });
-  $('yr').textContent = new Date().getFullYear();
+  $('yr').textContent = '1987';
   const fabVisibility = new IntersectionObserver(entries => {
     entries.forEach(entry => { entry.target.dataset.fabVisible = String(entry.isIntersecting); });
     const fabBlocked = [...document.querySelectorAll('#contact, footer')]
